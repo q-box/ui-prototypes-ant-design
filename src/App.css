@@ -16,6 +16,7 @@
 
 .App-title {
   font-size: 1.5em;
+  color: white;
 }
 
 .App-intro {
@@ -25,4 +26,25 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 500px;
+  line-height: 500px;
+  background: #EFEFEF;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #262626;
+}
+
+.ant-carousel .slick-dots li button {
+  border-radius: none;
+}
+
+li {
+  background: #262626;
+  border-radius: 2px;
 }

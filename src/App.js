@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import 'antd/dist/antd.css';
 import logo from './logo.svg';
+import { Carousel } from 'antd';
 import './App.css';
 
 class App extends Component {
@@ -11,7 +13,12 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          <Carousel autoplay>
+            <div><h1>1</h1></div>
+            <div><h1>2</h1></div>
+            <div><h1>3</h1></div>
+            <div><h1>4</h1></div>
+          </Carousel>
         </p>
       </div>
     );
