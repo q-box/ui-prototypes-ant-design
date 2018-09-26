@@ -7,12 +7,13 @@
   height: 80px;
 }
 
+/*
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
-}
+}*/
 
 .App-title {
   font-size: 1.5em;
@@ -20,8 +21,8 @@
 }
 
 @keyframes App-logo-spin {
+  to { transform: rotate(360deg) }
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 .ant-carousel .slick-slide {
@@ -40,7 +41,12 @@
   border-radius: none;
 }
 
-li {
+.ant-carousel .slick-dots li {
   background: #262626;
   border-radius: 2px;
+}
+
+.Lists-title {
+  padding: 30px;
+  font-size: 60px;
 }
