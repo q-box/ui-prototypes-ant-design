@@ -12,14 +12,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          <Carousel autoplay>
+        <div>
+          <Carousel>
             <div><h1>1</h1></div>
             <div><h1>2</h1></div>
             <div><h1>3</h1></div>
             <div><h1>4</h1></div>
           </Carousel>
-        </p>
+        </div>
       </div>
     );
   }
