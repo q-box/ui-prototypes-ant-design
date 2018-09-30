@@ -46,7 +46,33 @@
   border-radius: 2px;
 }
 
-.Lists-title {
-  padding: 30px;
+.lists-title {
+  margin: 0px;
+  margin-top: 50px;
+  margin-bottom: 10px;
   font-size: 60px;
+}
+
+.menu-float-left {
+  float: left;
+}
+
+.menu-float-right {
+  float: right;
+}
+
+.icon-menu {
+  font-size: 16px;
+}
+
+.submenu-center {
+  text-align: center;
+}
+
+.ant-drawer-body {
+  padding: 0px;
+}
+
+.ant-tabs-nav {
+  float: left;
 }
