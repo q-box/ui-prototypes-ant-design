@@ -6,12 +6,7 @@ import engineering from './imgs/engineering.png';
 import technology from './imgs/technology.png';
 import mathematics from './imgs/mathematics.png';
 import hamburguer from './imgs/hamburguer.png'
-import { Carousel } from 'antd';
-import { Row, Col } from 'antd';
-import { Layout, Menu, Drawer } from 'antd';
-import { Card, Icon } from 'antd';
-import { Pagination } from 'antd';
-import { Tabs, Modal, Input, Button } from 'antd';
+import { Carousel, Row, Col, Layout, Menu, Drawer, Card, Icon, Pagination, Tabs, Modal, Input, Button } from 'antd';
 import './App.css';
 
 const { Meta } = Card;
@@ -85,13 +80,11 @@ class App extends Component {
             </Menu.SubMenu>
           </Menu>
         </Header>
-
         <Modal
           title="Crie uma nova lista" centered visible={this.state.modal} onOk={() => this.add(document.querySelector('.txt-lista').value)} onCancel={() => this.setModal(false)}>
           <p>Nome da Lista:</p>
           <Input className={'txt-lista'} placeholder="Insira o nome da lista" />
         </Modal>
-
         <Drawer title="Menu Lateral" placement="left" closable={true} onClose={this.onClose} visible={this.state.visible}>
           <Menu onClick={this.handleClick} style={{ width: 256 }} defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} mode="inline">
             <SubMenu key="sub11" title={<span><Icon type="mail" /><span>Navigation One</span></span>}>
@@ -120,18 +113,97 @@ class App extends Component {
             </SubMenu>
           </Menu>
         </Drawer>
-
         <Content style={{ paddingBottom: '50px' }}>
           <div>
-            <Carousel>
-              <div><h1>1</h1></div>
-              <div><h1>2</h1></div>
-              <div><h1>3</h1></div>
-              <div><h1>4</h1></div>
+            <Carousel autoplay>
+              <div>
+                  <Row> 
+                    <Col lg={5}></Col>
+                    <Col lg={14}>
+                      <h1 className="carousel-title">Introdução</h1>
+                    </Col>
+                    <Col lg={5}></Col>
+                  </Row>
+                  
+                  <Row>
+                    <Col lg={5}></Col>
+                    <Col lg={6}>
+                      <img className="carousel-img" alt="Novidade" src={science}/>
+                    </Col>
+                    <Col lg={8}>
+                      <p className="carousel-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                      <Button type="primary" className="carousel-btn">Visitar<Icon type="right"></Icon></Button>  
+                    </Col>
+                    <Col lg={5}></Col>
+                  </Row>
+              </div>
+              <div>
+                <Row>
+                  <Col lg={5}></Col>
+                  <Col lg={14}>
+                    <h1 className="carousel-title">Novidade</h1>
+                  </Col>
+                  <Col lg={5}></Col>
+                </Row>
+                
+                <Row>
+                  <Col lg={5}></Col>
+                  <Col lg={6}>
+                    <img className="carousel-img" alt="Novidade" src={mathematics}/>
+                  </Col>
+                  <Col lg={8}>
+                    <p className="carousel-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                    <Button type="primary" className="carousel-btn">Visitar<Icon type="right"></Icon></Button>  
+                  </Col>
+                  <Col lg={5}></Col>
+                </Row>
+              </div>
+              <div>
+                <Row>
+                  <Col lg={5}></Col>
+                  <Col lg={14}>
+                    <h1 className="carousel-title">Novidade</h1>
+                  </Col>
+                  <Col lg={5}></Col>
+                </Row>
+                
+                <Row>
+                  <Col lg={5}></Col>
+                  <Col lg={6}>
+                    <img className="carousel-img" alt="Novidade" src={engineering}/>
+                  </Col>
+                  <Col lg={8}>
+                    <p className="carousel-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                    <Button type="primary" className="carousel-btn">Visitar<Icon type="right"></Icon></Button>  
+                  </Col>
+                  <Col lg={5}></Col>
+                </Row>
+              </div>
+              <div>
+                <Row>
+                  <Col lg={5}></Col>
+                  <Col lg={14}>
+                    <h1 className="carousel-title">Novidade</h1>
+                  </Col>
+                  <Col lg={5}></Col>
+                </Row>
+                
+                <Row>
+                  <Col lg={5}></Col>
+                  <Col lg={6}>
+                    <img className="carousel-img" alt="Novidade" src={technology}/>
+                  </Col>
+                  <Col lg={8}>
+                    <p className="carousel-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                    <Button type="primary" className="carousel-btn">Visitar<Icon type="right"></Icon></Button>  
+                  </Col>
+                  <Col lg={5}></Col>
+                </Row>
+              </div>
             </Carousel>
           </div>
           <div>
-            <Row>
+            <Row style={{ marginTop: '50px' }}>
               <Col span={24}>
                 <span className="lists-title">Listas</span>
               </Col>
